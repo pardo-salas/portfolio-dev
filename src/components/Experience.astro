@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Agosto 2023 - Diciembre 2023",
+    title: "Trainee Web Developer - Welldex Internacional",
+    description:
+      "Responsable de crear modulos para las plataformas de la empresa, encargandome de la parte del backend y frontend por igual. Implemente soluciones a los procesos del departamentos de compras agilizando sus procedimientos.",
+  },
+  {
+    date: "Enero 2023 - Julio 2023",
+    title: "Fullstack Web Developer ",
+    description:
+      "Responsable de la creación y desarrollo de aplicaciones web.",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
