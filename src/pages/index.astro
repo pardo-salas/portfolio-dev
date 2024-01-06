@@ -7,6 +7,7 @@ import Linkedin from '../icons/Linkedin.astro';
 import GitHub from '../icons/GitHub.astro';
 import Mail from '../icons/Mail.astro';
 import Experience from '../components/Experience.astro'
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Porfolio de Brian Salas | Desarrollador y Programador Web"
@@ -37,12 +38,13 @@ description="Contrata a Brian Salas para crear aplicaciones web de excelente cal
 				</Social>
 			</nav>
 		</Section>
-		<Section id="experience">
+		<Section class="py-20" id="experience">
 			<h2 class="text-4xl font-semibold pb-4">Experiencia Laboral</h2>
 			<Experience/>
 		</Section>
-		<Section id="project">
+		<Section class="py-20" id="project">
 			<h2 class="text-4xl font-semibold pb-4">Proyectos</h2>
+			<Projects/>
 		</Section>
 	</main>
 </Layout>
