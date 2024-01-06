@@ -13,16 +13,16 @@ import Experience from '../components/Experience.astro'
 description="Contrata a Brian Salas para crear aplicaciones web de excelente calidad "
 >
 	<main class="px-4">
-		<Section>
-			<img src="/sho.jpg" alt="Brian Salas " class="rounded-full size-16">
+		<Section class="py-32 pb-23">
+			<img src="/sho.jpg" alt="Brian Salas " class="ring ring-zinc-500 rounded-full size-20 mb-4">
 			<!-- <h3 class="text-xl text-blue-700/100 opacity-90 font-medium">Hello!</h3> -->
 			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold flex gap-x-4 pb-6 lg:pb-4">Soy Brian Salas 
-				<a href="https://www.linkedin.com/in/briansalas13/" target="_blank" rel="noopener" class="flex justify-center items-center">
+				<!-- <a href="https://www.linkedin.com/in/briansalas13/" target="_blank" rel="noopener" class="flex justify-center items-center">
 					<Badge>Avaible to Hire</Badge>
-				</a>
+				</a> -->
 			</h1>
 			<h2 class="text-xl lg:text-2xl text-wrap"><span class="text-blue-800/90">Desarrollador web fullstack.</span> Fusiono mi creatividad y determinacion para dar lugar a proyectos que alcancen un alta calidad y diseños increíbles.</h2>
-			<nav class="flex gap-2 mt-2 flex-wrap">
+			<nav class="flex gap-3 mt-2 flex-wrap">
 				<Social href="https://www.linkedin.com/in/briansalas13/">
 					<Linkedin class="size-4 md:size-6"/>
 					Linkedin
@@ -38,8 +38,11 @@ description="Contrata a Brian Salas para crear aplicaciones web de excelente cal
 			</nav>
 		</Section>
 		<Section id="experience">
-			<h2 class="text-3xl font-semibold">Experiencia Laboral</h2>
+			<h2 class="text-4xl font-semibold pb-4">Experiencia Laboral</h2>
 			<Experience/>
+		</Section>
+		<Section id="project">
+			<h2 class="text-4xl font-semibold pb-4">Proyectos</h2>
 		</Section>
 	</main>
 </Layout>
