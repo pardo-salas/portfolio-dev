@@ -17,6 +17,7 @@ const { title,description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -25,10 +26,12 @@ const { title,description } = Astro.props;
 		<Header/>
 		<slot />
 	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </html>
 
 <style is:global>
 	:root {
+		color: black;
 		color-scheme: light dark;
 	}
 	body {
@@ -38,7 +41,6 @@ const { title,description } = Astro.props;
 		min-height: 100vh;
 	}
 	html {
-		
 		scroll-behavior: smooth;
 		font-family: "Onest Variable",system-ui, sans-serif;
 	}
