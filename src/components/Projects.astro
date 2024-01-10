@@ -1,25 +1,31 @@
 ---
-import Tailwind from "../icons/Tailwind.astro"
-import AstroIcon from "../icons/AstroIcon.astro"
-import Javascript from "../icons/Javascript.astro"
+import Tailwind from "../icons/Tailwind.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Javascript from "../icons/Javascript.astro";
+import Nodejs from "../icons/Nodejs.astro";
 
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-blue-200/90 text-black",
+    class: "bg-cyan-600 text-black",
     icon: Tailwind,
   },
   ASTRO: {
     name: "Astro",
-    class: "bg-gray-400 text-black",
+    class: "bg-slate-400 text-black",
     icon: AstroIcon,
   },
-  JAVASCRIPT:{
+  JAVASCRIPT: {
     name: "Javascript",
     class: "bg-yellow-300/95 text-black",
-    icon: Javascript
-  }
-}
+    icon: Javascript,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-green-300/95 text-black",
+    icon: Nodejs,
+  },
+};
 const PROJECTS = [
   {
     title: "Porfolio",
@@ -30,34 +36,47 @@ const PROJECTS = [
     image: "/porfolio.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
-]
+  // {
+  //   title: "Url Shorter",
+  //   description:
+  //     "Este sitio es un acortador de links utilizando como backend NodeJS",
+  //   link: "#",
+  //   github: "https://github.com/pardo-salas/porfolio-dev",
+  //   image: "/porfolio.webp",
+  //   tags: [TAGS.NODEJS],
+  // },
+];
 ---
 
 {
   PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
-        {title}
-      </h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2  rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
-            >
-              <tag.icon class="size-4 " />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
+    <article class="flex flex-col rounded-xl w-80 overflow-hidden dark:bg-gray-900/95 shadow-xl">
       <img
         loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 size-full"
+        class="rounded-t-lg h-auto shadow-2xl shadow-white/10 size-full hover:scale-105 ease-in duration-150"
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
+      <div class="p-5 flex flex-col">
+        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-blue-300 mb-2">
+          {title}
+        </h3>
+        <p class="text-sm mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-2 flex-wrap">
+          {tags.map((tag) => (
+            <li>
+              <span
+              class={`items-center flex gap-x-2 rounded-full text-xs bg-slate-400/65 dark:bg-gray-700 py-1 px-2 border border-white/10`}
+            >
+              <tag.icon class="size-5 " />
+              {tag.name}
+            </span>
+            </li>
+          ))}
+        </ul>
+        <div>
+        </div>
+      </div>
     </article>
   ))
 }
