@@ -21,7 +21,7 @@ import Projects from "../components/Projects.astro";
         alt="Brian Salas "
         class="ring ring-zinc-500 rounded-full size-20 mb-4"
       />
-      <span class="text-sky-800 dark:text-sky-200/80 lg:text-lg"
+      <span class="text-sky-800 dark:text-sky-200/80 lg:text-lg font-semibold"
         >¡Hola!</span
       >
       <h1
@@ -32,22 +32,30 @@ import Projects from "../components/Projects.astro";
       <h2 class="text-xl lg:text-2xl text-wrap">
         <span class="text-sky-800 dark:text-sky-200/80"
           >Desarrollador web fullstack.</span
-        > <p>Un apasionado desarrollador web con experiencia en la creación de sitios web<span class="text-red-500 dark:text-red-300"> atractivos y funcionales.</span></p>
+        >
+        <p>
+          Un apasionado desarrollador web con experiencia en la creación de
+          sitios web<span class="text-red-500 dark:text-red-300">
+            atractivos y funcionales.</span>
+        </p>
       </h2>
       <nav class="flex gap-3 mt-2 flex-wrap">
         <Social href="https://www.linkedin.com/in/briansalas13/">
-          <Linkedin class="size-4 md:size-6" />
+          <Linkedin class="size-3 md:size-6" />
           Linkedin
         </Social>
         <Social href="https://github.com/pardo-salas">
-          <GitHub class="size-4 md:size-6" />
+          <GitHub class="size-3 md:size-6" />
           GitHub
         </Social>
         <Social href="mailto:salas.pardo13@gmail.com">
-          <Mail class="size-4 md:size-6" />
+          <Mail class="size-3 md:size-6" />
           salas.pardo13@gmail.com
         </Social>
       </nav>
+      <!-- <div class="flex items-center my-2">
+        <Social href="#" class="size-3">Descargar CV</Social>
+      </div> -->
     </Section>
     <Section class="py-20" id="experience">
       <h2 class="text-4xl font-semibold pb-4">Experiencia Laboral</h2>
@@ -55,10 +63,16 @@ import Projects from "../components/Projects.astro";
     </Section>
     <Section class="py-20" id="project">
       <h2 class="text-4xl font-semibold pb-4">Proyectos</h2>
-      <Projects />
+      <div class="grid md:grid-cols-2 gap-8 justify-center">
+        <Projects />
+      </div>
     </Section>
-    <Section class="py-20" id="contact">
-      <h2 class="text-4xl font-semibold pb-4">Contacto</h2>
+    <Section class="py-20" id="about">
+      <h2 class="text-4xl font-semibold pb-4">Sobre mí</h2>
+      <p class="text-pretty text-lg">Graduado de Sistemas Computacionales, perseverante, detallista y eficiente con dos años de experiencia en el
+        desarrollo web fullstack empeñado en aprovechar sus amplios conocimientos en pro del éxito de la empresa. Mi
+        creatividad y determinación para probar mi trabajo hasta que alcance la perfección creara confianza y
+        entusiasmo a cada cliente.</p>
     </Section>
   </main>
 </Layout>
