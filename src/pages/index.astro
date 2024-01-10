@@ -1,46 +1,64 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Section from '../components/SectionContainer.astro'
-import Social from '../components/Social.astro';
-import Linkedin from '../icons/Linkedin.astro';
-import GitHub from '../icons/GitHub.astro';
-import Mail from '../icons/Mail.astro';
-import Experience from '../components/Experience.astro'
-import Projects from '../components/Projects.astro';
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/SectionContainer.astro";
+import Social from "../components/Social.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import GitHub from "../icons/GitHub.astro";
+import Mail from "../icons/Mail.astro";
+import Cv from "../icons/Cv.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout title="Porfolio de Brian Salas | Desarrollador y Programador Web"
-description="Contrata a Brian Salas para crear aplicaciones web de excelente calidad "
+<Layout
+  title="Porfolio de Brian Salas | Desarrollador y Programador Web"
+  description="Contrata a Brian Salas para crear aplicaciones web de excelente calidad "
 >
-	<main class="px-4">
-		<Section class="py-32 pb-23">
-			<img src="/brian.webp" alt="Brian Salas " class="ring ring-zinc-500 rounded-full size-20 mb-4">
-			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold flex gap-x-4 pb-6 lg:pb-4">Soy Brian Salas
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap"><span class="text-sky-800 dark:text-sky-200/80">Desarrollador web fullstack.</span> Fusiono mi creatividad y determinacion para dar lugar a proyectos que alcancen un alta calidad y diseños increíbles.</h2>
-			<nav class="flex gap-3 mt-2 flex-wrap">
-				<Social href="https://www.linkedin.com/in/briansalas13/">
-					<Linkedin class="size-4 md:size-6"/>
-					Linkedin
-				</Social>
-				<Social href="https://github.com/pardo-salas">
-					<GitHub class="size-4 md:size-6"/>
-					GitHub
-				</Social>
-				<Social href="mailto:salas.pardo13@gmail.com">
-					<Mail  class="size-4 md:size-6"/>
-					salas.pardo13@gmail.com
-				</Social>
-			</nav>
-		</Section>
-		<Section class="py-20" id="experience">
-			<h2 class="text-4xl font-semibold pb-4">Experiencia Laboral</h2>
-			<Experience/>
-		</Section>
-		<Section class="py-20" id="project">
-			<h2 class="text-4xl font-semibold pb-4">Proyectos</h2>
-			<Projects/>
-		</Section>
-	</main>
+  <main class="px-4">
+    <Section class="py-32 pb-23">
+      <img
+        src="/brian.webp"
+        alt="Brian Salas "
+        class="ring ring-zinc-500 rounded-full size-20 mb-4"
+      />
+      <span class="text-sky-800 dark:text-sky-200/80 lg:text-lg"
+        >¡Hola!</span
+      >
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-bold flex gap-x-4 pb-6 lg:pb-4"
+      >
+        Soy Brian Salas
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap">
+        <span class="text-sky-800 dark:text-sky-200/80"
+          >Desarrollador web fullstack.</span
+        > <p>Un apasionado desarrollador web con experiencia en la creación de sitios web<span class="text-red-500 dark:text-red-300"> atractivos y funcionales.</span></p>
+      </h2>
+      <nav class="flex gap-3 mt-2 flex-wrap">
+        <Social href="https://www.linkedin.com/in/briansalas13/">
+          <Linkedin class="size-4 md:size-6" />
+          Linkedin
+        </Social>
+        <Social href="https://github.com/pardo-salas">
+          <GitHub class="size-4 md:size-6" />
+          GitHub
+        </Social>
+        <Social href="mailto:salas.pardo13@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          salas.pardo13@gmail.com
+        </Social>
+      </nav>
+    </Section>
+    <Section class="py-20" id="experience">
+      <h2 class="text-4xl font-semibold pb-4">Experiencia Laboral</h2>
+      <Experience />
+    </Section>
+    <Section class="py-20" id="project">
+      <h2 class="text-4xl font-semibold pb-4">Proyectos</h2>
+      <Projects />
+    </Section>
+    <Section class="py-20" id="contact">
+      <h2 class="text-4xl font-semibold pb-4">Contacto</h2>
+    </Section>
+  </main>
 </Layout>
-
