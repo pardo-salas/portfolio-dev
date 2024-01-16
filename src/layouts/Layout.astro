@@ -21,8 +21,8 @@ const { title,description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative">
-		<div class="absolute inset-0 -z-10 h-full w-full bg-slate-100 dark:bg-slate-800 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+	<body class="relative text-black dark:text-gray-200">
+		<div class="absolute inset-0 -z-10 h-full w-full bg-slate-100 dark:bg-slate-950 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 		<Header/>
 		<slot />
 		<Footer/>
