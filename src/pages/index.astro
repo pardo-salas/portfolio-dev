@@ -6,18 +6,7 @@ import Linkedin from "../icons/Linkedin.astro";
 import GitHub from "../icons/GitHub.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import Javascript from "../icons/Javascript.astro";
-import Nodejs from "../icons/Nodejs.astro";
-import Typescript from "../icons/Typescript.astro";
-import Express from "../icons/Express.astro";
-import Html from "../icons/Html.astro";
-import Css from "../icons/Css.astro";
-import Mongodb from "../icons/Mongodb.astro";
-import MySql from "../icons/MySql.astro";
-import Bootstrap from "../icons/Bootstrap.astro";
-import Php from "../icons/Php.astro";
-import Vuejs from "../icons/Vuejs.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
@@ -52,7 +41,7 @@ import Vuejs from "../icons/Vuejs.astro";
           </Social>
         </nav>
         <div class="flex md:justify-normal justify-center items-center my-2 ">
-          <a target="_blank" class="bg-sky-300 hover:bg-sky-200 dark:bg-sky-500/60 rounded-lg p-2 dark:hover:bg-sky-400/60 hover:scale-105 transition ease-in-out text-font-bold " href="https://drive.google.com/file/d/1VzG_3yFicIZNJbIG0kSUkdZZ6s5QSn76/view?usp=sharing">Descargar CV</a>
+          <a target="_blank" class="bg-sky-400 hover:bg-sky-200 dark:bg-sky-500/60 rounded-lg p-2 dark:hover:bg-sky-400/60 hover:scale-105 transition ease-in-out text-font-bold " href="https://drive.google.com/file/d/1VzG_3yFicIZNJbIG0kSUkdZZ6s5QSn76/view?usp=sharing">Descargar CV</a>
         </div>
       </div>
       <div class="flex-none flex justify-center items-center mb-4">
@@ -69,26 +58,11 @@ import Vuejs from "../icons/Vuejs.astro";
     </Section>
     <Section class="py-20" id="project">
       <h2 class="text-4xl font-semibold pb-4">Proyectos</h2>
-      <div class="grid md:grid-cols-2 gap-8 ">
-        <Projects />
-      </div>
+      <Projects/>
     </Section>
-    <Section class="py-20" id="tecnologies">
-      <h2 class="text-4xl font-semibold pb-4">Tecnologías</h2>
-      <nav class="flex flex-wrap gap-4 items-center justify-center">
-        <Html class="size-10"/>
-        <Css class="size-10"/>
-        <Javascript class="size-10"/>
-        <Typescript class="size-10"/>
-        <Tailwind class="size-10"/>
-        <Bootstrap class="size-10"/>
-        <Vuejs class="size-10"/>
-        <Php class="size-10"/>
-        <Nodejs class="size-10"/>
-        <Express class="size-10"/>
-        <Mongodb class="size-10"/>
-        <MySql class="size-10"/>
-      </nav>
+    <Section class="py-20" id="about-me">
+      <h2 class="text-4xl font-semibold pb-4">Sobre Mi</h2>
+      <AboutMe/>
     </Section>
   </main>
 </Layout>
