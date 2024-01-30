@@ -1,63 +1,65 @@
 ---
 import GitHub from "../icons/GitHub.astro";
 import Linkicon from "../icons/Linkicon.astro";
+import Button from "./Button.astro";
+
 const PROJECTS = [
   {
-    title: "Porfolio",
+    title: "Url Shorter",
     description:
-      "Este sitio web ha sido desarrollado con Astro y estilizado con Tailwind CSS, combinando eficiencia y diseño moderno.",
-    link: "https://briansalas.vercel.app/",
-    github: "https://github.com/pardo-salas/porfolio-dev",
-    image: "/porfolio.webp",
-    tags: ['Astro', 'Tailwind CSS'],
+      "El proyecto de URL Shortener consiste en desarrollar una aplicación web que permita a los usuarios acortar y compartir enlaces de forma rápida y sencilla. El objetivo principal de este proyecto es proporcionar a los usuarios una herramienta eficiente para reducir la longitud de los enlaces, lo que facilitará su compartición en diferentes plataformas como redes sociales, correos electrónicos o mensajes de texto.",
+    link: "https://url-shortener-e36i.onrender.com",
+    github: "https://github.com/pardo-salas/url-shortener",
+    image: "/url-shortener.webp",
+    tags: ["Node,js", "Tailwind CSS", "Express", "MongoDB"],
   },
-  // {
-  //   title: "Url Shorter",
-  //   description:
-  //     "Este sitio es un acortador de links utilizando como backend NodeJS",
-  //   link: "#",
-  //   github: "https://github.com/pardo-salas/porfolio-dev",
-  //   image: "/porfolio.webp",
-  //   tags: [Nodejs],
-  // },
 ];
 ---
 
 {
   PROJECTS.map(({ image, title, description, tags, github, link }) => (
-    <article class="flex flex-col rounded-xl w-80 overflow-hidden bg-slate-100/100 dark:bg-gray-900/95 shadow-xl">
-      <img
-      width="960"
-      height="720"
-        loading="lazy"
-        class="rounded-t-lg w-auto shadow-2xl shadow-white/10 hover:scale-105 ease-in duration-150"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-      <div class="p-5 flex flex-col">
+    <article class="flex flex-col gap-2">
+      <div class="flex flex-col">
         <div class="flex flex-row justify-between">
           <h3 class="text-2xl font-semibold text-sky-950 dark:text-sky-300 mb-2">
             {title}
           </h3>
-          <div class="flex flex-row gap-x-2">
-            <a title="Github repository" class="hover:scale-110 hover:dark:text-sky-300 hover:text-sky-900 transition ease-in-out" target="_blank" href={github}><GitHub class="size-6"/></a>
-            <a title="Live Project" class="hover:scale-110  hover:dark:text-sky-300 hover:text-sky-900 transition ease-in-out" target="_blank" href={link}><Linkicon class="size-6"/></a>
-          </div>
         </div>
         <p class="text-sm mb-4 text-pretty">{description}</p>
         <ul class="flex gap-2 flex-wrap">
           {tags.map((tag) => (
             <li>
               <span
-              class={`items-center flex gap-x-2  bg-blue-700/20 rounded-full text-xs dark:bg-gray-700 py-1 px-2 `}
-            >
-              {tag}
-            </span>
+                class={`items-center flex gap-x-2  bg-blue-700/20 rounded-full text-xs dark:bg-gray-700 py-1 px-2 `}
+              >
+                {tag}
+              </span>
             </li>
           ))}
         </ul>
-        <div>
-        </div>
+      </div>
+      <img
+        width="960"
+        height="720"
+        loading="lazy"
+        class="rounded-t-lg w-auto shadow-2xl shadow-white/10   "
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+      <div class="flex flex-row gap-x-2 items-center justify-end">
+        <Button
+        href={github}
+        >
+          <GitHub class="size-6" />
+          Ver Codigo Fuente
+        </Button>
+        <Button
+          title="Live Project"
+          href={link}
+        >
+          <Linkicon class="size-6" />
+          Ir al Sitio
+        </>
       </div>
     </article>
   ))
