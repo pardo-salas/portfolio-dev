@@ -1,0 +1,15 @@
+---
+const {href} =Astro.props 
+---
+<a
+  href={href}
+  class="
+    inline-flex py-1 px-2 md:px-4 md:py-2
+    rounded-full gap-x-1 items-center justify-end 
+    border border-gray-300 dark:border-white/10
+    dark:bg-white/5 
+    hover:scale-105 transition ease-in-out"
+  target="_blank"
+>
+  <slot />
+</a>
