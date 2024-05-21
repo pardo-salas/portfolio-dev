@@ -5,13 +5,13 @@ import Button from "./Button.astro";
 
 const PROJECTS = [
   {
-    title: "Url Shorter",
+    title: "URL Shortener",
     description:
-      "El proyecto de URL Shortener consiste en desarrollar una aplicación web que permita a los usuarios acortar y compartir enlaces de forma rápida y sencilla. El objetivo principal de este proyecto es proporcionar a los usuarios una herramienta eficiente para reducir la longitud de los enlaces, lo que facilitará su compartición en diferentes plataformas como redes sociales, correos electrónicos o mensajes de texto.",
-    link: "https://url-shortener-e36i.onrender.com",
-    github: "https://github.com/pardo-salas/url-shortener",
-    image: "/url-shortener.webp",
-    tags: ["Node.js", "Tailwind CSS", "Express", "MongoDB"],
+      "El proyecto de URL Shortener consiste en una aplicación web que permita a los usuarios acortar y gestionar enlaces de forma rápida y sencilla. El objetivo principal de este proyecto es proporcionar a los usuarios una herramienta eficiente para reducir la longitud de los enlaces, y administrarlos. El proyecto fue desarrollado en Laravel, con Vuejs 3.",
+    link: "surldev.vercel.app",
+    github: "https://github.com/pardo-salas/urlShortener",
+    image: "/urlshortener.webp",
+    tags: ["Laravel", "Bootstrap", "Vuejs", "Javascript", "Firebase"],
   },
   {
     title: "Chat with PDF",
@@ -63,13 +63,15 @@ const PROJECTS = [
           <GitHub class="size-6" />
           Ver Codigo Fuente
         </Button>
-        <Button
-          title="Live Project"
-          href={link}
-        >
-          <Linkicon class="size-6" />
-          Ir al Sitio
-        </>
+        {link != "" && (
+          <Button
+            title="Live Project"
+            href={link}
+          >
+            <Linkicon class="size-6" />
+            Ir al Sitio
+          </Button>
+        )}
       </div>
     </article>
   ))
